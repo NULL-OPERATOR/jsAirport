@@ -15,7 +15,4 @@ describe("fizzBuzz", function(){
   it("returns FizzBuzz if the number is divisible by 3 & 5", function(){
     expect(fizzBuzz(15)).toEqual("FizzBuzz")
   })
-  it("returns an error if the number is over 100", function(){
-    expect(fizzBuzz(120)).toThrow(new Error("Numbers between 1 & 100 only"))
-  })
 });
