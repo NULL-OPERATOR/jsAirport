@@ -1,4 +1,3 @@
-'use strict';
 
 describe('Feature Test:', function() {
   var plane;
@@ -9,8 +8,5 @@ describe('Feature Test:', function() {
     airport = new Airport();
   });
 
-  it('plane can land', function(){
-    plane.land(airport);
-    expect(airport.planes()).toContain(plane);
-  })
+
 })
