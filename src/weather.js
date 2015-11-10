@@ -2,5 +2,5 @@ function Weather() {
 }
 
 Weather.prototype.checkWeather = function() {
-  return  (Math.random() * 10 > 7);
+  return true;  // (Math.random() * 10 > 7);
 };

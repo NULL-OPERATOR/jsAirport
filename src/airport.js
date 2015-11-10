@@ -1,9 +1,9 @@
-function Airport(input) {
+function Airport(input, weather) {
   this.planes = [];
   this.limit = input;
-  this.weather = new Weather;
+  this.weather = weather || new Weather();
 }
-// var planes = [];
+
 Airport.prototype.land = function(plane) {
   if (this.weather.checkWeather() === false) {
     throw new Error("is stormy");
@@ -12,7 +12,8 @@ Airport.prototype.land = function(plane) {
     throw new Error("Airport is full");
   }
   else {
-    return this.planes.push(plane);
+    this.planes.push(plane);
+    this.planes[0].landed();
   }
 
 };
