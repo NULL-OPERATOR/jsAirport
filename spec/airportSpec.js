@@ -6,6 +6,7 @@ describe("airport", function(){
 
   beforeEach(function() {
     airport = new Airport(1, weather)
+    
     weather = jasmine.createSpyObj('weather',['checkWeather']);
     spyOn(wheather, 'checkWeather').and.returnValue(true);
 
